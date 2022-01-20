@@ -11,16 +11,15 @@ The graphic below shows the connections of the main PCB
 - Microcontroller: Kinetis MKL26Z128VLL4
 - Motor controller: A4950T
 
-
+# Connectors
 For further information of available pin Mux, check
 the [reference manual](https://nextcloud.saeber.de/s/ye7Zfg5ae8cNcGc?dir=undefined&path=%2Fprojects%2Fdeebot_mod%2Fdatasheets&openfile=339654) at page 176
 
-# Connectors 
 ## Programming (prog)
 The SWD interface is exposed on this connector See gdb
 | number | name | description |
 | ------ | ---- | ----------- |
-|   1    | PTE25| 
+|   1    | ???  | 
 |   2    | PTA0 | SWD_CLK     |
 |   3    | PTA1 | UART0_RX    |
 |   4    | PTA2 | UART0_TX    |
@@ -47,6 +46,29 @@ The SWD interface is exposed on this connector See gdb
 |   7    | GND       | switch    |
 
 # Firmware dump
-**Warning**: The firmware dump was created by reading out the memory mapped flash according to the datasheet. It is possible, that security measurements where active on the mcirocontroller to prevent a flash memory dump. Nevertheless, her it is:
+**Warning**: The firmware dump was created by reading out the memory mapped flash according to the datasheet. It is possible, that security measurements where active on the mcirocontroller to prevent a flash memory dump. Nevertheless, here it is:
 
 [Original Firmware Dump](https://nextcloud.saeber.de/s/ye7Zfg5ae8cNcGc/download?path=%2Fprojects%2Fdeebot_mod%2Ffirmware&files=deebot_slim_2_firmware_dump.bin&downloadStartSecret=tk08qtidq38)
+
+# Connecting via SWD
+Under Ubuntu 21.04 install the latest release of
+- openocd
+- gdb-multiarch
+
+I used an *ST-Link v2* clone to connect to the SWD interface exposed at the prog connector.
+With **openOCD** installed, open a terminal windoe and run the command:
+```
+openocd -f interface/stlink.cfg  -f target/klx.cfg  
+```
+
+In a second terminal window run **gdb**
+```
+gdb-multiarch
+```
+
+followed by
+```
+tar ext localhost:3333
+```
+
+With this, a debug connection should be established. From here, firmware dumps, register readout and manipulation are possible.
