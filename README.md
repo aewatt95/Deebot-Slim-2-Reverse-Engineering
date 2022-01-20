@@ -49,4 +49,4 @@ The SWD interface is exposed on this connector See gdb
 # Firmware dump
 **Warning**: The firmware dump was created by reading out the memory mapped flash according to the datasheet. It is possible, that security measurements where active on the mcirocontroller to prevent a flash memory dump. Nevertheless, her it is:
 
-[Original Firmware Dump](https://nextcloud.saeber.de/s/ye7Zfg5ae8cNcGc/download)
+[Original Firmware Dump](https://nextcloud.saeber.de/s/ye7Zfg5ae8cNcGc/download?path=%2Fprojects%2Fdeebot_mod%2Ffirmware&files=deebot_slim_2_firmware_dump.bin&downloadStartSecret=tk08qtidq38)
