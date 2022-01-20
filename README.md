@@ -19,7 +19,7 @@ the [reference manual](https://nextcloud.saeber.de/s/ye7Zfg5ae8cNcGc?dir=undefin
 The SWD interface is exposed on this connector See gdb
 | number | name | description |
 | ------ | ---- | ----------- |
-|   1    | ???  | 
+|   1    | 3.3V  | 
 |   2    | PTA0 | SWD_CLK     |
 |   3    | PTA1 | UART0_RX    |
 |   4    | PTA2 | UART0_TX    |
@@ -35,15 +35,27 @@ The SWD interface is exposed on this connector See gdb
 
 ### right
 
-| number | name      | description    |
-| ------ | --------- | -------------- |
-|   1    | OUT1/PTD3 | motor          |
-|   2    | OUT2/PTD2 | motor          |
-|   3    | ???       | impulse sensor |
-|   4    | ???       | impulse sensor |
-|   5    | ???       | impulse sensor |
-|   6    | ???       | switch    |
-|   7    | GND       | switch    |
+| number | name      | description          |
+| ------ | --------- | -------------------- |
+|   1    | OUT1/PTD3 | motor A              |
+|   2    | OUT2/PTD2 | motor  B             |
+|   3    | 5V - 750R | impulse sensor LED   |
+|   4    | PTD6      | impulse sensor SENSE |
+|   5    | GND       | impulse sensor GND   |
+|   6    | PTE25     | switch               |
+|   7    | GND       | switch               |
+
+### left
+
+| number | name      | description          |
+| ------ | --------- | -------------------- |
+|   1    | OUT1/PTD0 | motor A              |
+|   2    | OUT2/PTD1 | motor  B             |
+|   3    | 5V - 750R | impulse sensor LED   |
+|   4    | PTD7      | impulse sensor SENSE |
+|   5    | GND       | impulse sensor GND   |
+|   6    | PTE3      | switch               |
+|   7    | GND       | switch               |
 
 # Firmware dump
 **Warning**: The firmware dump was created by reading out the memory mapped flash according to the datasheet. It is possible, that security measurements where active on the mcirocontroller to prevent a flash memory dump. Nevertheless, here it is:
