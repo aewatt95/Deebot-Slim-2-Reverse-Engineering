@@ -57,6 +57,16 @@ The SWD interface is exposed on this connector See gdb
 |   6    | PTE3      | switch               |
 |   7    | GND       | switch               |
 
+## Vacuum motor
+The motor is driven by a N-channel mosfet in a FDS8958A, whos gate is driven by a transistor connected to the microcontroller.
+In addition, current sensing is performed, further pcb poking required...
+
+| number | name      | description          |
+| ------ | --------- | -------------------- |
+|   1    | PTD4      | motor                |
+|   2    | V_BAT     | motor                |
+
+
 # Firmware dump
 **Warning**: The firmware dump was created by reading out the memory mapped flash according to the datasheet. It is possible, that security measurements where active on the mcirocontroller to prevent a flash memory dump. Nevertheless, here it is:
 
