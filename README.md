@@ -11,6 +11,16 @@ The graphic below shows the connections of the main PCB
 - Microcontroller: Kinetis MKL26Z128VLL4
 - Motor controller: A4950T
 
+# On board peripherie
+| name  | description |
+| ----  | ----------- |
+| PTC6  | POWER_LED   | 
+| PTB23 | ERROR_LED   |
+| PTA13 | WLAN_LED    |
+| PTE2  | BUTTON      |
+| PTA7  | BEEPER      |
+
+
 # Connectors
 For further information of available pin Mux, check
 the [reference manual](https://nextcloud.saeber.de/s/ye7Zfg5ae8cNcGc?dir=undefined&path=%2Fprojects%2Fdeebot_mod%2Fdatasheets&openfile=339654) at page 176
