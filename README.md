@@ -23,7 +23,7 @@ The graphic below shows the connections of the main PCB
 
 # Connectors
 For further information of available pin Mux, check
-the [reference manual](https://nextcloud.saeber.de/s/ye7Zfg5ae8cNcGc?dir=undefined&path=%2Fprojects%2Fdeebot_mod%2Fdatasheets&openfile=339654) at page 176
+the [reference manual](https://nextcloud.saeber.de/s/4KzsAf43QYacKjq) at page 176
 
 ## Programming (prog)
 The SWD interface is exposed on this connector See gdb
@@ -80,7 +80,7 @@ In addition, current sensing is performed, further pcb poking required...
 # Firmware dump
 **Warning**: The firmware dump was created by reading out the memory mapped flash according to the datasheet. It is possible, that security measurements where active on the mcirocontroller to prevent a flash memory dump. Nevertheless, here it is:
 
-[Original Firmware Dump](https://nextcloud.saeber.de/s/ye7Zfg5ae8cNcGc/download?path=%2Fprojects%2Fdeebot_mod%2Ffirmware&files=deebot_slim_2_firmware_dump.bin&downloadStartSecret=tk08qtidq38)
+[Original Firmware Dump](https://nextcloud.saeber.de/s/cWzyQcRAXHYDd3m)
 
 # Connecting via SWD
 Under Ubuntu 21.04 install the latest release of
